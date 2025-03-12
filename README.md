@@ -44,7 +44,7 @@ function getHeader(method, uri) {
 * 호출하려는 API 의 Path와 Query Parameter 를 받아서 호출 요청을 하는 함수로 편의를 위해 작성해두었다.
 * 'Apps Scrtip' 내에서 UrlFetchApp' 클래스를 통해서 REST API 호출을 하는게 핵심이다.
 
-> 'muteHttpExceptions' 속성은 'fetch' 매서드의 매개변수의 option 중 하나이며, 'true'로 설정하며 응답에 실패해도 HTTPResponse 를 반환한다.
+> 'muteHttpExceptions' 속성은 'fetch' 매서드의 매개변수의 option 중 하나이며, 'true'로 설정하면 응답에 실패해도 HTTPResponse 를 반환한다.
 
 ```js
 function getRequest(uri, query = "") {
