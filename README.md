@@ -1,7 +1,11 @@
 # 네이버 검색광고 API 호출 가이드 (at 'Google Apps Script')
-Google Apps Script 에서 네이버 검색광고 API 를 호출하는 방법을 설명합니다.
+### Summary
+* Google Apps Script 에서 네이버 검색광고 API 를 호출하는 방법을 설명합니다.
 
-## 1. 'Signature(서명)' 생성하기
+&nbsp;
+
+## Description
+### 1. 'Signature(서명)' 생성하기
 
 1) API를 호출하는 시점에 맞는 시간 값('timestamp')으로 해시 값을 생성하기 위해 시간 값을 매개변수로 전달 받는다.
 2) 사용자가 호출하고 싶은 API에 맞춰 HTTP Method('method') 값을 설정해야 한다.
@@ -18,7 +22,9 @@ function generateSignature(timestamp, method, uri) {
 }
 ```
 
-## 2. Header 값 세팅하기
+&nbsp;
+
+### 2. Header 값 세팅하기
 
 1) Header는 API를 호출할 때마다 생성되어야 하니, 호출 할 때마다 변경되는 값들('timestamp', 'method', 'uri')을 Header 생성 시 함께 처리해준다.
 
@@ -39,7 +45,9 @@ function getHeader(method, uri) {
 }
 ```
 
-## 3. 'GET' Method 요청 호출하기
+&nbsp;
+
+### 3. 'GET' Method 요청 호출하기
 
 * 호출하려는 API 의 Path와 Query Parameter 를 받아서 호출 요청을 하는 함수로 편의를 위해 작성해두었다.
 * 'Apps Scrtip' 내에서 UrlFetchApp' 클래스를 통해서 REST API 호출을 하는게 핵심이다.
